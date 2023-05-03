@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'profile.dart';
 import 'Car.dart';
+import 'accoount.dart';
 
 class RegistrationFormScreen extends StatefulWidget {
   @override
@@ -187,7 +188,12 @@ class HomeScreen extends StatelessWidget {
                     label: 'ACCOUNT',
                     color: Colors.yellow,
                     onPressed: () {
-                      // Implement onPressed for CAR button
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => WalletScreen(),
+                        ),
+                      );
                     },
                   ),
                   RoundedButton(

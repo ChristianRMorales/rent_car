@@ -62,7 +62,7 @@ class ProfileScreen extends StatelessWidget {
             },
             icon: Icon(Icons.arrow_forward),
             label: Text('Start'),
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.blueAccent,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),

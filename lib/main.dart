@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rentalcar/profile.dart';
 import 'Home.dart';
 import 'profile.dart';
+import 'select.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,8 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Form Example',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Color.fromRGBO(0, 188, 212, 1),
       ),
       home: StartScreen(),
     );
@@ -26,15 +28,12 @@ class StartScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Colors.lightBlue[100]!,
-              Color(0xff227bc5)!,
-            ],
-          ),
-        ),
+            gradient: LinearGradient(
+          colors: [Color(0xff00bcd4), Color(0xff064170)],
+          stops: [0, 1],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        )),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -50,7 +49,7 @@ class StartScreen extends StatelessWidget {
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
-                fontFamily: 'Pacifico',
+                fontFamily: 'RobotoMono',
               ),
             ),
             SizedBox(height: 32),
@@ -65,8 +64,7 @@ class StartScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => RegistrationFormScreen()),
+                  MaterialPageRoute(builder: (context) => SelectScreen()),
                 );
               },
               child: Text(
